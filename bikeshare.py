@@ -33,7 +33,7 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("Please enter the days of week to view the US bikeshare data : ").lower()
     while day not in DAY_DATA :
-        print ("Oops! Looks like the day is invalid value!")
+        print ("Oops! Looks like the day is invalid value! ")
         day= input("If you want to select all day of the week, enter all and vice versa, enter the values: monday, tuesday, wednesday, thursday', friday, saturday, sunday : ").lower()
 
     print('-'*40)
@@ -156,6 +156,9 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
+    """
+    Displays raw data with the specified number of rows at a time.
+    """
     start_index= 0 
     end_index = 5
     while True:
